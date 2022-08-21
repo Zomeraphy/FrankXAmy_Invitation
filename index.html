@@ -2,11 +2,37 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 <link rel="stylesheet" href="Invitation_View.css">
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
     <meta charset="utf-8" />
     <title>品嘉♥宛萱</title>
 </head>
+
 <body>
-    <img src="Images/Cover_Flower.png" alt="" class="test">
+    <div>
+        <img src="Images/Cover_BG.jpg" alt="" class="coverBG">
+        <img src="Images/Title.png" alt="" class="coverTitle">
+        <img src="Images/Subtitle.png" alt="" class="coverSubtitle">
+        <div>
+            <script type="text/javascript">
+                function FlowerVisible() {
+                    var flower = document.querySelector('.coverFlower');
+                    flower.style.opacity = 1;
+                }
+                setTimeout(FlowerVisible, 4500);
+            </script>
+            <img src="Images/Cover_Flower.png" alt="" class="coverFlower">
+
+            <script type="text/javascript">
+                function ShineVisible() {
+                    var shine = document.querySelector('.shine');
+                    shine.style.opacity = 1;
+                }
+                setTimeout(ShineVisible, 4500);
+            </script>
+            <img src="Images/Shine.png" alt="" class="shine">
+        </div>
+    </div>
 </body>
+
 </html>

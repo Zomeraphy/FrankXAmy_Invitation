@@ -1,11 +1,52 @@
 body {
-    background-image: url(Images/BG.jpg);
-    width: 620px;
-    margin: auto;
-  }
-  .test {
-    width: 620px;
-    margin: auto;
-    animation: flipInY; /* 引用動畫的 @keyframe 名稱 */
-    animation-duration: 2s; /* 別忘了設定持續時間 */
-  }
+  background-image: url(Images/BG.jpg);
+  width: 620px;
+  height: 880px;
+  margin: auto;
+}
+
+.coverBG {
+  position: absolute;
+  top: 10px;
+  z-index: 0;
+  animation: flipInY;
+  animation-duration: 1.5s;
+}
+
+.coverFlower {
+  position: absolute;
+  top: 10px;
+  z-index: 1;
+  opacity: 0;
+  animation: fadeIn;
+  animation-delay: 1.5s;
+  animation-duration: 3s;
+}
+
+.coverTitle {
+  position: relative;
+  top: 40px;
+  left: 60px;
+  z-index: 3;
+  animation: fadeInUp;
+  animation-duration: 1.5s;
+}
+.coverSubtitle {
+  position: relative;
+  top: 0px;
+  left: 170px;
+  z-index: 2;
+  animation: fadeInUp;
+  animation-duration: 1.5s;
+}
+
+.shine {
+  position: absolute;
+  top: 10px;
+  z-index: 4;
+  opacity: 0;
+  animation: flash;
+  animation-delay: 5s;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
