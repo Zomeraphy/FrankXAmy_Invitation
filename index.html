@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+<link rel="stylesheet" href="animate.css">
 <link rel="stylesheet" href="Invitation_View.css">
 
 <head>
@@ -8,8 +8,31 @@
 </head>
 
 <body>
-    <div>
-        <img src="Images/Cover_BG.jpg" alt="" class="coverBG">
+    <script type="text/javascript">
+        var isCover = true;
+        function FlipEvent() {
+            var element = document.getElementById('Cover_BG');
+            if(isCover){
+                document.querySelector('.coverFlower').style.display = "none";
+                document.querySelector('.coverTitle').style.display = "none";
+                document.querySelector('.coverSubtitle').style.display = "none";
+                element.classList.replace("coverBG", "card");
+                element.src ="Images/Content.jpg";
+                isCover = false;
+            }
+            else{
+                element.classList.replace("card", "coverBG");
+                element.src ="Images/Cover_BG.jpg";
+                document.querySelector('.coverFlower').style.display = "";
+                document.querySelector('.coverTitle').style.display = "";
+                document.querySelector('.coverSubtitle').style.display = "";
+                isCover = true;
+            }
+        }
+
+    </script>
+    <div onclick="FlipEvent()">
+        <img id="Cover_BG" src="Images/Cover_BG.jpg" alt="" class="coverBG">
         <img src="Images/Title.png" alt="" class="coverTitle">
         <img src="Images/Subtitle.png" alt="" class="coverSubtitle">
         <div>
