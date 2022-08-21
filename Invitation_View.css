@@ -1,9 +1,11 @@
 body {
-    margin: 0 auto;
+    background-image: url(Images/BG.jpg);
+    width: 620px;
+    margin: auto;
   }
   .test {
-    width: 80%;
-    height: 80%;
-    animation: flipInY;
-    animation-duration: 2s;
+    width: 620px;
+    margin: auto;
+    animation: flipInY; /* 引用動畫的 @keyframe 名稱 */
+    animation-duration: 2s; /* 別忘了設定持續時間 */
   }
