@@ -5,56 +5,66 @@
 <head>
     <meta charset="utf-8" />
     <title>品嘉♥宛萱</title>
+
 </head>
 
 <body>
     <script type="text/javascript">
         var isCover = true;
+        
+        function Fit() {
+            var w = window.screen.width;
+            var h = window.screen.height;
+            if (w < h) {
+                document.body.classList.add("mobile");
+            }
+            else {
+                document.body.classList.add("desktop");
+            }
+        }
         function FlipEvent() {
             var element = document.getElementById('Cover_BG');
-            if(isCover){
+            if (isCover) {
                 document.querySelector('.coverFlower').style.display = "none";
                 document.querySelector('.coverTitle').style.display = "none";
                 document.querySelector('.coverSubtitle').style.display = "none";
                 element.classList.replace("coverBG", "card");
-                element.src ="Images/Content.jpg";
+                element.src = "Images/Content_Flip.jpg";
                 isCover = false;
             }
-            else{
+            else {
                 element.classList.replace("card", "coverBG");
-                element.src ="Images/Cover_BG.jpg";
+                element.src = "Images/Cover_BG.jpg";
                 document.querySelector('.coverFlower').style.display = "";
+                document.querySelector('.coverFlower').style.opacity = 0;
                 document.querySelector('.coverTitle').style.display = "";
                 document.querySelector('.coverSubtitle').style.display = "";
                 isCover = true;
             }
         }
-
+        function SetVisible(className) {
+            var element = document.querySelector(className);
+            element.addEventListener('animationend', () => { element.style.opacity = 1; });
+        }
+        Fit();
     </script>
     <div onclick="FlipEvent()">
         <img id="Cover_BG" src="Images/Cover_BG.jpg" alt="" class="coverBG">
         <img src="Images/Title.png" alt="" class="coverTitle">
         <img src="Images/Subtitle.png" alt="" class="coverSubtitle">
         <div>
-            <script type="text/javascript">
-                function FlowerVisible() {
-                    var flower = document.querySelector('.coverFlower');
-                    flower.style.opacity = 1;
-                }
-                setTimeout(FlowerVisible, 4500);
-            </script>
             <img src="Images/Cover_Flower.png" alt="" class="coverFlower">
-
-            <script type="text/javascript">
-                function ShineVisible() {
-                    var shine = document.querySelector('.shine');
-                    shine.style.opacity = 1;
-                }
-                setTimeout(ShineVisible, 4500);
-            </script>
             <img src="Images/Shine.png" alt="" class="shine">
+            <script type="text/javascript">
+                var element = document.getElementById('Cover_BG');
+                element.addEventListener("animationend", () => { if (!isCover) element.src = "Images/Content.jpg"; });
+                SetVisible('.coverFlower');
+                SetVisible('.shine');
+            </script>
         </div>
     </div>
+
+
 </body>
 
 </html>

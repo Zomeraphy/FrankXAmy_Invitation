@@ -1,8 +1,16 @@
 body {
   background-image: url(Images/BG.jpg);
-  width: 620px;
-  height: 880px;
   margin: auto;
+}
+
+.moblie{
+  width: 95%;
+  height: 880px;
+}
+
+.desktop{
+  width: 620px;
+  height: 95%;
 }
 
 .coverBG {
@@ -17,7 +25,7 @@ body {
   position: absolute;
   top: 10px;
   z-index: 0;
-  animation: flip;
+  animation: flipToBack;
   animation-duration: 1.5s;
 }
 
