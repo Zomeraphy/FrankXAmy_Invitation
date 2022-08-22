@@ -4,13 +4,13 @@ body {
 }
 
 .moblie{
-  width: 95%;
-  height: 95%;
+  width: 620px;
+  height: 880px;
 }
 
 .desktop{
   width: 620px;
-  height: 95%;
+  height: 880px;
 }
 
 .coverBG {
