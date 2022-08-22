@@ -5,18 +5,17 @@
 <head>
     <meta charset="utf-8" />
     <title>品嘉♥宛萱</title>
-
 </head>
 
 <body>
     <script type="text/javascript">
         var isCover = true;
         function Fit() {
-            var w = window.screen.width;
-            var h = window.screen.height;
-
+            var w = window.innerWidth;
+            var h = window.innerHeight;
             if (w < h) {
                 document.body.classList.add("mobile");
+                
             }
             else {
                 document.body.classList.add("desktop");
