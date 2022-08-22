@@ -2075,11 +2075,6 @@
         opacity: 1
     }
 
-    80% {
-        -webkit-transform: perspective(1500px) rotateY(-5deg);
-        transform: perspective(1500px) rotateY(-5deg)
-    }
-
     to {
         -webkit-transform: perspective(1500px);
         transform: perspective(1500px)
@@ -2106,11 +2101,6 @@
         -webkit-transform: perspective(1500px) rotateY(10deg);
         transform: perspective(1500px) rotateY(10deg);
         opacity: 1
-    }
-
-    80% {
-        -webkit-transform: perspective(1500px) rotateY(-5deg);
-        transform: perspective(1500px) rotateY(-5deg)
     }
 
     to {
