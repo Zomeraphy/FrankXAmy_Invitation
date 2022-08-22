@@ -1,4 +1,4 @@
-@media screen and (orientation: landscape) {
+@media (orientation: landscape) {
   body {
     background-image: url(Images/BG.jpg);
     width: 620px;
@@ -6,7 +6,7 @@
     margin: auto;
   }
 }
-@media screen and (orientation: portrait) {
+@media (orientation: portrait) {
   body {
     background-image: url(Images/BG.jpg);
     width: 95%;
