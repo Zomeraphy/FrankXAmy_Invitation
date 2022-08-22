@@ -52,7 +52,7 @@
   position: relative;
   top: 40px;
   left: 60px;
-  z-index: 3;
+  z-index: 15;
   animation: fadeInUp;
   -webkit-animation: fadeInUp;
   animation-duration: 1.5s;
@@ -63,7 +63,7 @@
   position: relative;
   top: 0px;
   left: 170px;
-  z-index: 2;
+  z-index: 10;
   animation: fadeInUp;
   -webkit-animation: fadeInUp;
   animation-duration: 1.5s;
@@ -73,7 +73,7 @@
 .shine {
   position: absolute;
   top: 10px;
-  z-index: 4;
+  z-index: 20;
   opacity: 0;
   animation: flash;
   -webkit-animation: flash;
