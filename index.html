@@ -10,17 +10,6 @@
 <body>
     <script type="text/javascript">
         var isCover = true;
-        function Fit() {
-            var w = window.innerWidth;
-            var h = window.innerHeight;
-            if (w < h) {
-                document.body.classList.add("mobile");
-                
-            }
-            else {
-                document.body.classList.add("desktop");
-            }
-        }
         function FlipEvent() {
             var element = document.getElementById('Cover_BG');
             if (isCover) {
@@ -45,7 +34,6 @@
             var element = document.querySelector(className);
             element.addEventListener('animationend', () => { element.style.opacity = 1; });
         }
-        Fit();
     </script>
     <div onclick="FlipEvent()">
         <img id="Cover_BG" src="Images/Cover_BG.jpg" alt="" class="coverBG">

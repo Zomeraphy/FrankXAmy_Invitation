@@ -1,16 +1,18 @@
-body {
-  background-image: url(Images/BG.jpg);
-  margin: auto;
+@media screen and (orientation: landscape) {
+  body {
+    background-image: url(Images/BG.jpg);
+    width: 620px;
+    height: 95%;
+    margin: auto;
+  }
 }
-
-.moblie{
-  width: 360px;
-  height: 640px;
-}
-
-.desktop{
-  width: 620px;
-  height: 880px;
+@media screen and (orientation: portrait) {
+  body {
+    background-image: url(Images/BG.jpg);
+    width: 360px;
+    height: 640px;
+    margin: auto;
+  }
 }
 
 .coverBG {
@@ -56,6 +58,7 @@ body {
   animation-duration: 1.5s;
   -webkit-animation-duration: 1.5s;
 }
+
 .coverSubtitle {
   position: relative;
   top: 0px;
