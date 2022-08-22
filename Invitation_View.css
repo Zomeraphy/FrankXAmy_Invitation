@@ -1,17 +1,17 @@
 @media (orientation: landscape) {
   body {
     background-image: url(Images/BG.jpg);
-    width: 620px;
-    height: 95%;
     margin: auto;
+    width: 620px;
+    height: 880px;
   }
 }
 @media (orientation: portrait) {
   body {
     background-image: url(Images/BG.jpg);
-    width: 95%;
-    height: 880px;
     margin: auto;
+    width: 360px;
+    height: 640px;
   }
 }
 
