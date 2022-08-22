@@ -9,8 +9,8 @@
 @media screen and (orientation: portrait) {
   body {
     background-image: url(Images/BG.jpg);
-    width: 360px;
-    height: 640px;
+    width: 95%;
+    height: 880px;
     margin: auto;
   }
 }
