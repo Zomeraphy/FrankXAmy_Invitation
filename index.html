@@ -40,28 +40,21 @@
 
     <div onclick="FlipEvent()">
         <img id="Cover_BG" src="Images/Cover_BG.jpg" alt="" class="coverBG">
-        <img src="Images/Title.png" alt="" class="coverTitle">
-        <img src="Images/Subtitle.png" alt="" class="coverSubtitle">
-
-        <script type="text/javascript">
-            var element = document.getElementById('Cover_BG');
-            element.addEventListener('animationend', () => {
-                if (!isCover) element.src = "Images/Content.jpg";
-            });
-            SetVisible('.coverTitle');
-            SetVisible('.coverSubtitle');
-        </script>
+        <img onload="SetVisible('.coverTitle')" src="Images/Title.png" alt="" class="coverTitle">
+        <img onload="SetVisible('.coverSubtitle')" src="Images/Subtitle.png" alt="" class="coverSubtitle">
+        
         <div>
-            <img src="Images/Cover_Flower.png" alt="" class="coverFlower">
-            <img src="Images/Shine.png" alt="" class="shine">
+            <img onload="SetVisible('.coverFlower')" src="Images/Cover_Flower.png" alt="" class="coverFlower">
+            <img onload="SetVisible('.shine')" src="Images/Shine.png" alt="" class="shine">
         </div>
     </div>
     <div class="tip">點擊卡片翻面</div>
     <script type="text/javascript">
-        SetVisible('.coverFlower');
-        SetVisible('.shine');
+        var element = document.getElementById('Cover_BG');
+        element.addEventListener('animationend', () => {
+            if (!isCover) element.src = "Images/Content.jpg";
+        });
         SetVisible('.tip');
     </script>
 </body>
-
 </html>
