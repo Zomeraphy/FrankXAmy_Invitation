@@ -10,8 +10,8 @@
   body {
     background-image: url(Images/BG.jpg);
     margin: auto;
-    width: 620px;
-    height: 880px;
+    width: 360px;
+    height: 640px;
   }
 }
 
@@ -21,8 +21,10 @@
   z-index: 0;
   animation: flipInY;
   -webkit-animation: flipInY;
-  animation-duration: 1.5s;
-  -webkit-animation-duration: 1.5s;
+  animation-delay: -100ms;
+  -webkit-animation-delay: -100ms;
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
 }
 
 .card {
@@ -42,8 +44,8 @@
   opacity: 0;
   animation: fadeIn;
   -webkit-animation: fadeIn;
-  animation-delay: 1.5s;
-  -webkit-animation-delay: 1.5s;
+  animation-delay: 2.5s;
+  -webkit-animation-delay: 2.5s;
   animation-duration: 3s;
   -webkit-animation-duration: 3s;
 }
@@ -52,7 +54,8 @@
   position: relative;
   top: 40px;
   left: 60px;
-  z-index: 120;
+  z-index: 3;
+  opacity: 0;
   animation: fadeInUp;
   -webkit-animation: fadeInUp;
   animation-delay: 1s;
@@ -65,7 +68,8 @@
   position: relative;
   top: 0px;
   left: 170px;
-  z-index: 100;
+  z-index: 2;
+  opacity: 0;
   animation: fadeInUp;
   -webkit-animation: fadeInUp;
   animation-delay: 1s;
@@ -77,12 +81,12 @@
 .shine {
   position: absolute;
   top: 10px;
-  z-index: 200;
+  z-index: 4;
   opacity: 0;
   animation: flash;
   -webkit-animation: flash;
-  animation-delay: 5s;
-  -webkit-animation-delay: 5s;
+  animation-delay: 5.5s;
+  -webkit-animation-delay: 5.5s;
   animation-duration: 3s;
   -webkit-animation-duration: 3s;
   animation-iteration-count: infinite;
