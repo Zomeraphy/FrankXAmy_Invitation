@@ -15,9 +15,7 @@
         var isCover = true;
         function FlipEvent() {
             var element = document.getElementById('Cover_BG');
-            document.querySelector('.coverTitle').style.display = isCover ? "none" : "";
-            document.querySelector('.coverSubtitle').style.display = isCover ? "none" : "";
-            document.querySelector('.coverFlower').style.display = isCover ? "none" : "";
+            
             if (isCover) {
                 element.classList.replace("coverBG", "card");
                 element.src = "Images/Content_Flip.jpg";
@@ -31,6 +29,9 @@
                 document.querySelector('.coverFlower').style.opacity = 0;
                 isCover = true;
             }
+            document.querySelector('.coverTitle').style.display = !isCover ? "none" : "";
+            document.querySelector('.coverSubtitle').style.display = !isCover ? "none" : "";
+            document.querySelector('.coverFlower').style.display = !isCover ? "none" : "";
         }
         function SetVisible(className) {
             var element = document.querySelector(className);
