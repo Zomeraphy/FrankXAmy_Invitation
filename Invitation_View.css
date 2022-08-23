@@ -1,23 +1,56 @@
+body{
+  background-image: url(Images/BG.jpg);
+  margin: auto;
+}
+
 @media (orientation: landscape) {
   body {
-    background-image: url(Images/BG.jpg);
-    margin: auto;
     width: 620px;
     height: 880px;
   }
+
+  .tip {
+    position: fixed;
+    bottom: 10px;
+    left: 0px;
+    right: 820px;
+    font-size: 40px;
+  }
 }
-@media (orientation: portrait) {
+
+@media (orientation: portrait) and (max-width:768px){
   body {
-    background-image: url(Images/BG.jpg);
-    margin: auto;
+    width: 390px;
+    height: 844px;
+  }
+
+  .tip {
+    position: absolute;
+    top: 890px;
+    left: 180px;
+    right: -75px;
+    font-size: 50px;
+  }
+}
+
+@media (orientation: portrait) and (min-width:768px){
+  body {
     width: 620px;
     height: 880px;
+  }
+
+  .tip {
+    position: absolute;
+    top: 890px;
+    left: 180px;
+    right: 180px;
+    font-size: 50px;
   }
 }
 
 .coverBG {
   position: absolute;
-  top: 10px;
+  top: 0px;
   z-index: 0;
   animation: flipInY;
   -webkit-animation: flipInY;
@@ -27,7 +60,7 @@
 
 .card {
   position: absolute;
-  top: 10px;
+  top: 0px;
   z-index: 0;
   animation: flipToBack;
   -webkit-animation: flipToBack;
@@ -37,7 +70,7 @@
 
 .coverFlower {
   position: absolute;
-  top: 10px;
+  top: 0px;
   z-index: 1;
   opacity: 0;
   animation: fadeIn;
@@ -78,7 +111,7 @@
 
 .shine {
   position: absolute;
-  top: 10px;
+  top: 0px;
   z-index: 4;
   opacity: 0;
   animation: flash;
@@ -89,4 +122,18 @@
   -webkit-animation-duration: 3s;
   animation-iteration-count: infinite;
   -webkit-animation-iteration-count: infinite;
+}
+
+.tip {
+  font-family: 辰宇落雁體;
+  color: #495d6f;
+  text-align: center;
+  z-index: 5;
+  opacity: 0;
+  animation: fadeInUp;
+  -webkit-animation: fadeInUp;
+  animation-delay: 4.5s;
+  -webkit-animation-delay: 4.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-duration: 1.5s;
 }

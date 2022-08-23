@@ -1,13 +1,13 @@
 ﻿<!DOCTYPE html>
 <link rel="stylesheet" href="animate.css">
 <link rel="stylesheet" href="Invitation_View.css">
-<link rel="preload" href="Images/Content_Flip.jpg" as="image" />
-<link rel="preload" href="Images/Content.jpg" as="image" />
-<meta name="viewport" content="width=device-width" />
+<meta name="viewport" content="width=device-width">
 
 <head>
     <meta charset="utf-8" />
     <title>品嘉♥宛萱</title>
+    <link rel="preload" href="Images/Content_Flip.jpg" as="image" />
+    <link rel="preload" href="Images/Content.jpg" as="image" />
 </head>
 
 <body>
@@ -15,7 +15,6 @@
         var isCover = true;
         function FlipEvent() {
             var element = document.getElementById('Cover_BG');
-            
             if (isCover) {
                 element.classList.replace("coverBG", "card");
                 element.src = "Images/Content_Flip.jpg";
@@ -38,25 +37,31 @@
             element.addEventListener('animationend', () => { element.style.opacity = 1; });
         }
     </script>
+
     <div onclick="FlipEvent()">
         <img id="Cover_BG" src="Images/Cover_BG.jpg" alt="" class="coverBG">
         <img src="Images/Title.png" alt="" class="coverTitle">
         <img src="Images/Subtitle.png" alt="" class="coverSubtitle">
+
         <script type="text/javascript">
             var element = document.getElementById('Cover_BG');
-            element.addEventListener("animationend", () => { if (!isCover) element.src = "Images/Content.jpg"; });
+            element.addEventListener('animationend', () => {
+                if (!isCover) element.src = "Images/Content.jpg";
+            });
             SetVisible('.coverTitle');
             SetVisible('.coverSubtitle');
         </script>
         <div>
             <img src="Images/Cover_Flower.png" alt="" class="coverFlower">
             <img src="Images/Shine.png" alt="" class="shine">
-            <script type="text/javascript">
-                SetVisible('.coverFlower');
-                SetVisible('.shine');
-            </script>
         </div>
     </div>
+    <div class="tip">點擊卡片翻面</div>
+    <script type="text/javascript">
+        SetVisible('.coverFlower');
+        SetVisible('.shine');
+        SetVisible('.tip');
+    </script>
 </body>
 
 </html>
