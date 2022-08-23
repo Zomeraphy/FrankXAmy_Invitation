@@ -1,6 +1,7 @@
+@import url(https://fonts.googleapis.com/earlyaccess/cwtexfangsong.css);
 @font-face {
   font-family: '辰宇落雁體';
-  src: url('ChenYuluoyan-Thin.ttf') format("truetype");
+  src: url('Fonts/ChenYuluoyan-Thin.ttf') format("truetype");
 }
 
 body{
@@ -130,7 +131,7 @@ body{
 }
 
 .tip {
-  font-family: 辰宇落雁體;
+  font-family: '辰宇落雁體', 'cwTeXFangSong';
   color: #495d6f;
   text-align: center;
   z-index: 5;
