@@ -1,3 +1,8 @@
+@font-face {
+  font-family: '辰宇落雁體';
+  src: url('ChenYuluoyan-Thin.ttf') format("truetype");
+}
+
 body{
   background-image: url(Images/BG.jpg);
   margin: auto;
