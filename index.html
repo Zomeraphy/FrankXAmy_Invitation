@@ -39,19 +39,21 @@
         <img id="Cover_BG" src="Images/Cover_BG.jpg" alt="" class="coverBG">
         <img src="Images/Title.png" alt="" class="coverTitle">
         <img src="Images/Subtitle.png" alt="" class="coverSubtitle">
+        <script type="text/javascript">
+            var element = document.getElementById('Cover_BG');
+            element.addEventListener("animationend", () => { if (!isCover) element.src = "Images/Content.jpg"; });
+            SetVisible('.coverTitle');
+            SetVisible('.coverSubtitle');
+        </script>
         <div>
             <img src="Images/Cover_Flower.png" alt="" class="coverFlower">
             <img src="Images/Shine.png" alt="" class="shine">
+            <script type="text/javascript">
+                SetVisible('.coverFlower');
+                SetVisible('.shine');
+            </script>
         </div>
     </div>
-    <script type="text/javascript">
-        var element = document.getElementById('Cover_BG');
-        element.addEventListener("animationend", () => { if (!isCover) element.src = "Images/Content.jpg"; });
-        SetVisible('.coverTitle');
-        SetVisible('.coverSubtitle');
-        SetVisible('.coverFlower');
-        SetVisible('.shine');
-    </script>
 </body>
 
 </html>
